@@ -24,7 +24,7 @@ function sass() {
 
 function serve() {
   browserSync.init({
-    proxy: "grav.local"
+    proxy: "grav.devel"
   });
 
   gulp.watch("scss/*.scss", sass);

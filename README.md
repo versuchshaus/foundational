@@ -5,9 +5,17 @@ The theme is built with [Zurb Foundation 6.5](https://foundation.zurb.com/sites/
 
 You must have Node Package Manager (npm) installed before you can use this theme. Additionally, you may need to install some dependencies such as node-sass and gulp. Nodejs instructions are available all over the internet.
 
-After copying this theme to the Grav theme folder, you must install Foundation by running NPM and Bower. 
+After copying this theme to the Grav theme folder, you must install Foundation by running NPM. 
 
-* On the command line, run the command 'npm install'.
+* On the command line, navigate to the user/themes/foundational directory within your Grav installation and run the command 'npm install'.
+* Open gulpfile.js and look for this code:
+
+    function serve() {
+      browserSync.init({
+        proxy: "grav.devel"
+      });
+      
+* Replace "grav.devel" with the domain name of your Grav installation 
 
 The theme uses SCSS. Make changes to style sheets by editing the SCSS files in the SCSS directory. 
 
