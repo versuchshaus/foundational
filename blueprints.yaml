@@ -4,10 +4,10 @@ description: A Zurb Foundation 6 theme for Grav CMS
 icon: rebel
 author:
   name: Douglas Gough
-  email: dougwgough@gmail.com
+  email: douglas@unblind.io
 homepage: https://github.com/douglasgough/foundational
-demo: https://foundational.douggough.com
-keywords: grav, theme, etc
+demo: http://foundational.unblind.io
+keywords: grav, theme
 bugs: https://github.com/douglasgough/foundational/issues
 readme: https://github.com/douglasgough/foundational/README.md
 license: MIT
