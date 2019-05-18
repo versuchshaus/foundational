@@ -1,6 +1,8 @@
 # Foundational
 
-The theme is being rewritten from the ground up to provide a better post-installation experience. My original intention was to provide just the basics so that theme developers could build their own creations based on Foundational. I have decided instead to provide a complete working theme for Grav that someone can install and use immediately, in hopes of fostering greater adoption of this amazing content management system. Since this is a side project, I can't give a solid timeline, but work is proceeding steadily.
+**Please Note:** The theme is being rewritten from the ground up to provide a better post-installation experience. My original intention was to provide just the basics so that theme developers could build their own creations based on Foundational. I have decided instead to provide a complete working theme for Grav that someone can install and use immediately, in hopes of fostering greater adoption of this amazing content management system.
+
+Since this is a side project, I can't give a solid timeline, but work is proceeding steadily. 
 
 The **Foundational** Theme is for [Grav CMS](http://github.com/getgrav/grav).
 The theme is built with [Zurb Foundation 6.5](https://foundation.zurb.com/sites/docs/index.html). 
