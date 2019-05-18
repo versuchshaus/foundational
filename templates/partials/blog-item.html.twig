@@ -1,4 +1,4 @@
-<div class="content-item h-entry">
+<div class="content-item">
 
 {% if not hero_image_name %}
     <div class="content-title text-center">
@@ -21,10 +21,10 @@
 
 <p class="prev-next text-center">
     {% if not page.isLast %}
-            <a class="btn" href="{{ page.prevSibling.url }}"><i class="fa fa-angle-left"></i> {{ 'THEME_QUARK.BLOG.ITEM.PREV_POST'|t }}</a>
+            <a class="btn" href="{{ page.prevSibling.url }}"><i class="fa fa-angle-left"></i> {{ 'THEME_FOUNDATIONAL.BLOG.ITEM.PREV_POST'|t }}</a>
     {% endif %}
 
     {% if not page.isFirst %}
-        <a class="btn" href="{{ page.nextSibling.url }}">{{ 'THEME_QUARK.BLOG.ITEM.NEXT_POST'|t }} <i class="fa fa-angle-right"></i></a>
+        <a class="btn" href="{{ page.nextSibling.url }}">{{ 'THEME_FOUNDATIONAL.BLOG.ITEM.NEXT_POST'|t }} <i class="fa fa-angle-right"></i></a>
     {% endif %}
 </p>
