@@ -25,3 +25,14 @@ form:
           0: PLUGIN_ADMIN.DISABLED
         validate:
           type: bool
+    blog_section:
+      type: section
+      title: Blog Defaults
+      underline: true
+
+    blog-page:
+      type: text
+      label: Blog Page
+      help: The route to the blog page when working with blog sidebar
+      size: medium
+      default: '/blog'
