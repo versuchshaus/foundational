@@ -1,5 +1,5 @@
 {% extends 'partials/base.html.twig' %}
-{% set blog_image = page.media.images[page.header.hero_image] ?: page.media.images|first %}
+{% set blog_image = page.header.hero_image %}
 {% set collection = page.collection() %}
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog])|defined(true) %}
@@ -7,21 +7,25 @@
 {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
 
 {% block hero %}
-    {% include 'partials/hero.html.twig' with {id: 'blog-hero', content: page.content, hero_image: blog_image} %}
+    <div class="grid-container">
+        {% include 'partials/hero.html.twig' with {id: 'blog-hero', content: page.content, hero_image: blog_image} %}
+    </div>
 {% endblock %}
 
 {% block body %}
-    <section id="body-wrapper" class="section blog-listing">
-        <section class="container {{ grid_size }}">
-
+    <section id="main" class="grid-container blog-listing">
         {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-            {% include 'partials/breadcrumbs.html.twig' %}
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    {% include 'partials/breadcrumbs.html.twig' %}
+                </div>
+            </div>
         {% endif %}
 
         {% embed 'partials/layout.html.twig' with {blog: page} %}
             {% block item %}
 
-                <div class="bricklayer">
+                <div class="content">
                 {% for child in collection %}
                     {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
                 {% endfor %}
@@ -39,12 +43,7 @@
                 {% include 'partials/sidebar.html.twig' %}
             {% endblock %}
         {% endembed %}
-        </section>
     </section>
-    <script>
-        //Bricklayer
-        var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
-    </script>
 {% endblock %}
 
 
